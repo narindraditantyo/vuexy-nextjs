@@ -1,7 +1,12 @@
-import '../styles/globals.css'
+import "bootstrap/dist/css/bootstrap.min.css";
+import "@/styles/main.scss";
+import { ThemeContext } from "utils/context/ThemeColors";
+import '@/components/@fake-db'
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
-}
+const App = ({ Component, pageProps }) => (
+  <ThemeContext>
+    <Component {...pageProps} />
+  </ThemeContext>
+);
 
-export default MyApp
+export default App;
